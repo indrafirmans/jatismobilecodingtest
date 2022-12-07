@@ -1,12 +1,16 @@
 package com.imdev.jatismobilecodingtest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 @Entity
 @Table(name = "orders")
 public class Orders {
@@ -14,13 +18,13 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
-    private Integer orderID;
+    private Integer orderId;
 
     @Column(name = "customer_id")
-    private String customerId;
+    private Integer customerId;
 
     @Column(name = "employee_id")
-    private String employeeId;
+    private Integer employeeId;
 
     @Column(name = "order_date")
     private String orderDate;
@@ -32,7 +36,7 @@ public class Orders {
     private String shipDate;
 
     @Column(name = "shipping_method_id")
-    private String shippingMethodId;
+    private Integer shippingMethodId;
 
     @Column(name = "freight_charge")
     private String freightCharge;

@@ -1,12 +1,16 @@
 package com.imdev.jatismobilecodingtest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
 @Entity
 @Table(name = "order_details")
 public class OrderDetails {
@@ -17,17 +21,17 @@ public class OrderDetails {
     private Integer orderDetailID;
 
     @Column(name = "order_id")
-    private String orderID;
+    private Integer orderId;
 
     @Column(name = "product_id")
-    private String productId;
+    private Integer productId;
 
     @Column(name = "quantity")
-    private String quantity;
+    private Integer quantity;
 
     @Column(name = "unit_price")
-    private String unitPrice;
+    private Integer unitPrice;
 
     @Column(name = "discount")
-    private String discount;
+    private Integer discount;
 }

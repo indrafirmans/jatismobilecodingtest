@@ -1,14 +1,15 @@
 package com.imdev.jatismobilecodingtest.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.Accessors;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
+@Data
 @Table(name = "customers")
 public class Customers {
     

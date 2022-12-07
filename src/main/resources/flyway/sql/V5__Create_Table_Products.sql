@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT exists products (
     product_id SERIAL PRIMARY KEY,
-    product_name Integer,
+    product_name VARCHAR(50),
     unit_price Integer,
     in_stock CHAR(1)
 );
